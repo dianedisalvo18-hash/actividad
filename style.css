@@ -1,0 +1,260 @@
+/* seccion inicio */
+.img-inicio {
+    background-image: url(Subtítulo\ \(1\).png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.fondo-opaco {
+    background-color: rgba(79, 91, 79, 0.792);
+    width: 100%;
+    height: 100%;
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    color: #c8ebbe;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 6px;
+    font-weight: 600;
+    text-shadow: 2px 3px rgb(64, 175, 127)
+}
+
+.title:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease, color 0.3s ease;
+    color: #2a684b;
+}
+
+.texto {
+    margin: 30px;
+    font-size: 1.8rem;
+    color:white
+}
+
+/* clase del contenedor del logo */
+.posiscion_logo { 
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+/* clase de la imagen*/
+.imagen_logo {
+    max-width: 500px;
+    height: auto;
+}
+
+/* Media query: el logo se adapta a la resolución en dispositivos móviles, este cambio se nota cuando este la resolucion establecida */
+@media (max-width: 767px) {
+    .posiscion_logo {
+        justify-content: center;
+        /* lo centramos en mobile */
+    }
+
+    .imagen_logo {
+        max-width: 80%;
+    }
+}
+
+
+/* seccion quienes */ 
+#nosotros {
+    min-height: 70vh;
+        background-color: rgba(98, 117, 109, 0.805) ;
+}
+
+.carousel-item {
+    
+    border: 2px solid #5c8b6e;
+    height: 100%;
+    min-height: 400px;
+    background: no-repeat center center scroll;
+    border-radius: 20px;
+    object-fit: cover;
+    /*  terminaciones circular */
+    -webkit-background-size: cover ;/*Propiedad para que la imagen ocupe todo el contenedor*/
+    background-size: cover;
+}
+
+
+
+/* busqueda de imagenes para carousel  */
+.imagencarousel1 {
+    background-image: url(PASTA.jpeg)
+}
+ 
+.imagencarousel2 {
+    background-image: url(ensalada.jpeg);
+}
+
+.imagencarousel3 {
+    background-image: url(1tiramisu.jpeg);
+}
+.imagencarousel4{
+    background-image: url(crostini.jpeg);
+}
+
+
+/* seccion favoritos */
+
+#favoritos {
+    height: auto;
+    width: auto;
+    background-color: rgba(98, 117, 109, 0.805);
+      display: grid;         
+    flex-wrap: wrap-reverse;
+    gap: 30px;             
+    justify-content: center;
+
+}
+
+.title-card {
+    color: #1db47dd7;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+.card-text {
+    text-align: center;
+    font-size: 25px;
+    
+}
+.borde-card {
+    border: 3px solid#1dad79d7;
+    border-radius: 10px;
+    margin: 20;
+
+}
+
+
+
+
+/* seccion chefs */
+
+#chefs {
+    height: auto;
+    background-color:rgba(98, 117, 109, 0.805) ;
+    padding-bottom: 30px;
+}
+
+.card-img-top {
+    height: 38vw;
+    background-position: center;
+    object-fit: center; /* propiedad para ajustar el contenido para que ocupe el espacio disponible*/
+    width: 100%;
+}
+
+.nombre-pro {
+    font-size: 1.6rem;
+    color: rgb(86, 138, 90);
+}
+
+/* media query permite aplicar estilos si se cumplen ciertas condiciones, no esta diciedo que cuando tenga un ancho maximo de 768 px aplica esta estilo  */
+@media (max-width :768px) {
+    .card-img-top {
+        height: 50vh;
+    }
+} 
+
+/* max-width : propiedad que significa hasta este ancho como maximo
+  min-width : propiedad que significa : desde este ancho en adelante 
+*/
+
+
+
+
+
+/*seccion  donde encontrarnos */
+
+iframe {
+    width: 90%;
+    height: auto;
+    aspect-ratio: 16/9;  /* propiedad para mantener la prporcion en pantalla */
+    padding-bottom: 20px;
+    
+}
+
+
+/* seccion contacto/formulario */
+
+#contacto {
+    height: 100vh;
+    background-color: rgba(98, 117, 109, 0.805) ;      
+
+}
+
+
+.form {
+    max-width: 600px;
+    width: 100%;
+    background-color: #a1bbb5b2;
+    border-radius: 30px;
+    padding: 30px;
+    margin-top: 50px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+   
+
+}
+
+.texto-formulario{
+    font-size: 25px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: white;
+}
+
+input{
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+textarea{
+    width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        font-size: 15px;
+}
+
+.boton {
+    height: 50px;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #378180;
+    box-shadow: 1px 2px 2px black;
+    border: 1px rgb(51, 107, 110);
+}
+
+.boton:hover{
+    background-color: rgb(43, 147, 119);
+}
+
+.img-form {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+
+}
+
+
+/*  footer */
+
+.icon {
+    font-size: 60px;
+}
