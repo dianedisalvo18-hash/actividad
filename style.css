@@ -1,6 +1,6 @@
 /* seccion inicio */
 .img-inicio {
-    background-image: url(Subtítulo\ \(1\).png);
+    background-image: url(img/sapore\ Log.jpeg);
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
@@ -8,7 +8,7 @@
 
 
 .fondo-opaco {
-    background-color: rgba(79, 91, 79, 0.792);
+    background-color: rgba(79, 91, 79, 0);
     width: 100%;
     height: 100%;
    
@@ -65,80 +65,151 @@
     }
 }
 
-
-/* seccion quienes */ 
+/* Sección quienes */
 #nosotros {
-    min-height: 70vh;
-        background-color: rgba(98, 117, 109, 0.805) ;
+  min-height: 70vh;
+  background-color: rgba(98, 117, 109, 0.805);
+  padding: 40px;
+
 }
 
+/* Para que el texto se vea prolijo en columnas */
+#nosotros .title {
+  color: #c8ebbe; /* verde suave */
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+#nosotros .title:hover {
+  color: #2a684b;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.card-nosotros {
+  border-radius: 20px;
+  padding: 30px;
+}
+
+#nosotros .texto {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #0c0101;
+}
+
+
+/*#nosotros {
+  min-height: 70vh;
+  background-color: rgba(98, 117, 109, 0.805);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+.card-nosotros {
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #2a684b;
+}
+
+
+/* Contenedor general del carrusel */
+#carouselExample {
+  border: 2px solid #5c8b6e; /* borde verde suave */
+  overflow: hidden;          /* evita que las imágenes sobresalgan */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* sombra elegante */
+  max-width: 100%;           /* se adapta al ancho disponible */
+  margin: 0 auto;            /* centra el carrusel */
+}
+
+/* Cada slide o “item” */
 .carousel-item {
-    
-    border: 2px solid #5c8b6e;
-    height: 100%;
-    min-height: 400px;
-    background: no-repeat center center scroll;
-    border-radius: 20px;
-    object-fit: cover;
-    /*  terminaciones circular */
-    -webkit-background-size: cover ;/*Propiedad para que la imagen ocupe todo el contenedor*/
-    background-size: cover;
+  height: 590px; /* alto fijo del carrusel (podés ajustarlo) */
 }
 
-
+/* Las imágenes dentro del carrusel */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* mantiene proporción y recorta lo que sobra */
+  border-radius: 20px;
+}
 
 /* busqueda de imagenes para carousel  */
 .imagencarousel1 {
-    background-image: url(PASTA.jpeg)
+    background-image: url(img/Ossobuco.jpeg)
 }
  
 .imagencarousel2 {
-    background-image: url(ensalada.jpeg);
+    background-image: url(img/Spaghetti\ alla\ Carbonara.jpeg);
 }
 
 .imagencarousel3 {
-    background-image: url(1tiramisu.jpeg);
+    background-image: url(img/Polpette\ al\ sugo.jpeg);
 }
 .imagencarousel4{
-    background-image: url(crostini.jpeg);
+    background-image: url(img/Melanzane\ alla\ Parmigiana.jpeg);
 }
 
 
 /* seccion favoritos */
+#favoritos .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#favoritos .col-4 {
+  display: flex;
+}
 
 #favoritos {
     height: auto;
     width: auto;
     background-color: rgba(98, 117, 109, 0.805);
-      display: grid;         
+    gap: 25px; /* separa las tarjetas entre sí */
+    justify-content: center; /* centra si sobran columnas */
+    display: grid;         
     flex-wrap: wrap-reverse;
     gap: 30px;             
     justify-content: center;
 
 }
+.card {
+  border-radius: 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 250px;
+  width: 80%;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.borde-card {
+  background-color: #fffaf5; 
+  padding: 20px;
+  text-align: center;
+}
 
 .title-card {
-    color: #1db47dd7;
-    text-align: center;
-    font-size: 30px;
-    font-family: 'Times New Roman', Times, serif;
+  color: #6b1b1b;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
-
-
 
 .card-text {
-    text-align: center;
-    font-size: 25px;
-    
+  color: #333;
+  font-size: 0.95rem;
 }
-.borde-card {
-    border: 3px solid#1dad79d7;
-    border-radius: 10px;
-    margin: 20;
-
-}
-
-
 
 
 /* seccion chefs */
@@ -158,7 +229,7 @@
 
 .nombre-pro {
     font-size: 1.6rem;
-    color: rgb(86, 138, 90);
+    color:  #6b1b1b;
 }
 
 /* media query permite aplicar estilos si se cumplen ciertas condiciones, no esta diciedo que cuando tenga un ancho maximo de 768 px aplica esta estilo  */
@@ -181,8 +252,9 @@
 iframe {
     width: 90%;
     height: auto;
-    aspect-ratio: 16/9;  /* propiedad para mantener la prporcion en pantalla */
+    aspect-ratio: 16/10;  /* propiedad para mantener la prporcion en pantalla */
     padding-bottom: 20px;
+    
     
 }
 
